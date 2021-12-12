@@ -1,0 +1,81 @@
+.team {
+	background-color: $second-bg-color;
+	min-height: 648px;
+}
+
+.team__list {
+	display: flex;
+}
+.team__item:not(:last-child) {
+	margin-right: 30px;
+}
+
+.team__item {
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 0px 0px 4px 4px;
+}
+.team__card {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: $main-color;
+}
+.team__name {
+	margin-bottom: 10px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.19;
+	text-align: center;
+	letter-spacing: 0.03em;
+	color: $second-color;
+}
+.team__position {
+	margin-bottom: 16px;
+	font-size: 16px;
+	line-height: 1.19;
+	text-align: center;
+	letter-spacing: 0.03em;
+	color: $text-color;
+}
+.social {
+	display: flex;
+	justify-content: center;
+}
+
+.social__item {
+	width: 44px;
+	height: 44px;
+}
+.social__item:nth-child(n + 2) {
+	margin-left: 10px;
+}
+.social__link {
+	width: 100%;
+	height: 100%;
+	display: block;
+
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: $timing-function;
+
+	background-color: $main-color;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	outline: none;
+}
+.social__link:hover,
+.social__link:focus {
+	background-color: $accent-color;
+}
+.social__icon {
+	transition-property: fill;
+	transition-duration: 250ms;
+	transition-timing-function: $timing-function;
+
+	fill: $icon-color;
+}
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+	fill: main-color;
+}
