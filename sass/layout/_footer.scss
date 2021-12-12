@@ -28,6 +28,10 @@ footer {
 	text-decoration: inherit;
 	color: $main-color;
 	outline: none;
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
 }
 .footer__mail {
 	display: block;
@@ -45,6 +49,10 @@ footer {
 	text-decoration: inherit;
 	color: $link-color;
 	outline: none;
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
 }
 .footer__tel {
 	display: block;
@@ -61,14 +69,10 @@ footer {
 	text-decoration: inherit;
 	color: $link-color;
 	outline: none;
-}
-.footer__location:hover,
-.footer__mail:hover,
-.footer__tel:hover,
-.footer__location:focus,
-.footer__mail:focus,
-.footer__tel:focus {
-	color: $accent-color;
+	:hover,
+	:focus {
+		color: $accent-color;
+	}
 }
 
 .footer__address {
@@ -118,19 +122,20 @@ footer {
 	background-color: $foot-bg-color;
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	box-sizing: border-box;
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+	filter: drop-shadow(0px 4px 4px $shadow-color);
 	border-radius: 4px;
 	color: $main-color;
-}
-.footer__input::placeholder {
-	width: 47px;
-	height: 20px;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 1.25;
+	&::placeholder {
+		width: 47px;
+		height: 20px;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 1.25;
 
-	color: rgba(255, 255, 255, 0.6);
+		color: rgba(255, 255, 255, 0.6);
+	}
 }
+
 .footer__btn {
 	display: flex;
 	align-items: center;
@@ -153,9 +158,9 @@ footer {
 	transition-property: background-color, border-radius;
 	transition-duration: 250ms;
 	transition-timing-function: $timing-function;
-}
-.footer__btn:hover,
-.footer__btn:focus {
-	background-color: $btn-hover-color;
-	border-radius: 0;
+	&:hover,
+	&:focus {
+		background-color: $btn-hover-color;
+		border-radius: 0;
+	}
 }
