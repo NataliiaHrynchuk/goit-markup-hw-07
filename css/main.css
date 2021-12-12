@@ -295,7 +295,7 @@ header {
   background-color: #2196f3;
 }
 
-.social__link--footer {
+.social__link--dark {
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -314,7 +314,7 @@ header {
   fill: #afb1b8;
 }
 
-.social__icon--footer {
+.social__icon--light {
   fill: #ffffff;
 }
 
