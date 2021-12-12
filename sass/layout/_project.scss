@@ -7,14 +7,16 @@
 .project__item {
 	margin-right: 30px;
 	flex-basis: calc(100% / 3 - 30px);
+	&:not(:nth-last-child(-n + 3)) {
+		margin-bottom: 30px;
+	}
+	&:nth-child(3n) {
+		margin-right: 0;
+	}
 }
 
-.project__item:not(:nth-last-child(-n + 3)) {
-	margin-bottom: 30px;
-}
-.project__item:nth-child(3n) {
-	margin-right: 0;
-}
+
+
 .project__link {
 	display: block;
 	outline: none;
@@ -59,9 +61,7 @@
 	overflow: hidden;
 }
 
-.project__item:hover .project__content {
-	transform: translateY(0);
-}
+
 .project__content {
 	position: absolute;
 	top: 0;
@@ -80,4 +80,7 @@
 	color: $main-color;
 	transform: translateY(100%);
 	transition: transform 250ms $timing-function;
+	.project__item:hover & {
+		transform: translateY(0);
+	}
 }
