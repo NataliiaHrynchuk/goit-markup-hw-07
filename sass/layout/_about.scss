@@ -1,22 +1,12 @@
 .about__list {
 	display: flex;
 }
-.about__title,
-.team__title,
-.client__title {
-	margin-bottom: 50px;
-	font-weight: 700;
-	font-size: 36px;
-	line-height: 1.17;
-	text-align: center;
-	letter-spacing: 0.03em;
-	color: $second-color;
-}
+
 .about__item {
 	position: relative;
-}
-.about__item:not(:last-child) {
-	margin-right: 30px;
+	&:not(:last-child) {
+		margin-right: 30px;
+	}
 }
 
 .about__label {
