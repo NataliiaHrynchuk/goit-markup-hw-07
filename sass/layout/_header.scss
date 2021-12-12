@@ -65,11 +65,12 @@ header {
 .nav {
 	display: flex;
 }
-.nav__item:not(:last-child) {
-	margin-right: 50px;
-}
+
 .nav__item {
 	display: block;
+	&:not(:last-child) {
+		margin-right: 50px;
+	}
 }
 .header {
 	align-items: center;
@@ -103,10 +104,6 @@ header {
 	&:focus {
 		color: $accent-color;
 	}
-	&:hover .auth__icon,
-	&:focus .auth__icon {
-		fill: $accent-color;
-	}
 }
 
 .auth__icon {
@@ -117,4 +114,8 @@ header {
 	fill: $text-color;
 	align-content: center;
 	margin-right: 10px;
+	.auth__link:hover &,
+	.auth__link:focus & {
+		fill: $accent-color;
+	}
 }
