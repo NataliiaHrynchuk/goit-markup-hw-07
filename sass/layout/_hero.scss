@@ -6,7 +6,7 @@
 	padding-top: 200px;
 	padding-bottom: 200px;
 	background-color: $second-color;
-	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img14.jpg);
+	background-image: linear-gradient(to right, $gradient-color, $gradient-color), url(../images/Img14.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -51,9 +51,9 @@
 	letter-spacing: 0.06em;
 	color: $main-color;
 	background-color: $accent-color;
-}
-.hero__btn:hover,
-.hero__btn:focus {
-	background-color: $btn-hover-color;
-	border-radius: 0;
+	&:hover,
+	&:focus {
+		background-color: $btn-hover-color;
+		border-radius: 0;
+	}
 }
