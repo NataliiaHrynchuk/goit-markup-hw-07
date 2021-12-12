@@ -8,18 +8,18 @@
 	min-height: 581px;
 	background-color: $main-color;
 	border-radius: 4px;
-	box-shadow: 0px 1px 3px $main-shadow-color, 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 1px 3px $main-shadow-color, 0px 1px 1px $second-shadow-color, 0px 2px 1px $third-shadow-color;
 	opacity: 1;
 	transition: transform 250ms $timing-function, scale 250ms var(--timing-function), opasity 250ms $timing-function;
-}
-
-.backdrop--hidden {
-	.modal {
-		transform: translate(-50%, 100%) scale(0.1);
-		transition: transform 250ms $timing-function, scale 250ms var(--timing-function), opasity 250ms $timing-function;
-		opacity: 0;
+	.backdrop--hidden {
+		& {
+			transform: translate(-50%, 100%) scale(0.1);
+			transition: transform 250ms $timing-function, scale 250ms var(--timing-function), opasity 250ms $timing-function;
+			opacity: 0;
+		}
 	}
 }
+
 .modal__close {
 	display: flex;
 	align-items: center;
@@ -81,10 +81,6 @@
 	&:focus {
 		border-color: $accent-color;
 	}
-	&:hover + .modal__icon,
-	&:focus + .modal__icon {
-		fill: $accent-color;
-	}
 }
 
 .modal__comment {
@@ -129,6 +125,10 @@
 	transition-property: fill;
 	transition-duration: 250ms;
 	transition-timing-function: $timing-function;
+	.modal__input:hover + &,
+	.modal__input:focus + & {
+		fill: $accent-color;
+	}
 }
 .modal__consent {
 	display: flex;
@@ -140,11 +140,6 @@
 	letter-spacing: 0.03em;
 
 	color: $text-color;
-
-	&:hover .modal__tick,
-	&:focus .modal__tick {
-		border: 2px solid $accent-color;
-	}
 }
 
 .modal__tick {
@@ -163,12 +158,15 @@
 	transition-property: border;
 	transition-duration: 250ms;
 	transition-timing-function: $timing-function;
-}
-
-.modal__checkbox:checked + .modal__consent .modal__tick {
-	background-color: $accent-color;
-	border: none;
-	fill: $main-color;
+	.modal__consent:hover &,
+	.modal__consent:focus & {
+		border: 2px solid $accent-color;
+	}
+	.modal__checkbox:checked & {
+		background-color: $accent-color;
+		border: none;
+		fill: $main-color;
+	}
 }
 
 .modal__policy {
